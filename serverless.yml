@@ -1,0 +1,22 @@
+service: leve-saude-api
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  agendas:
+    handler: src/agenda/controller.getAgendas
+    events:
+      - http:
+          path: agendas
+          method: get
+  agendamento:
+    handler: src/agendamento/controller.postAgendamento
+    events:
+      - http:
+          path: agendamento
+          method: post
+
+plugins:
+  - serverless-offline
