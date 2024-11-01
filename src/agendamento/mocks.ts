@@ -20,3 +20,4 @@ export const mockAgendas = [
     }
   ];
   
+  export const mockAgendamentos = [];

@@ -6,13 +6,13 @@ provider:
 
 functions:
   agendas:
-    handler: src/agenda/controller.getAgendas
+    handler: src/agenda/controller.getAgendasHandler
     events:
       - http:
           path: agendas
           method: get
   agendamento:
-    handler: src/agendamento/controller.postAgendamento
+    handler: src/agendamento/controller.postAgendamentoHandler
     events:
       - http:
           path: agendamento
